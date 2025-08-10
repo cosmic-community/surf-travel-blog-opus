@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+
+  body {
+    @apply bg-white text-gray-900;
+  }
+}
+
+@layer components {
+  .prose-surf {
+    @apply prose prose-lg max-w-none
+      prose-headings:text-surf-900
+      prose-p:text-gray-700
+      prose-a:text-surf-600 prose-a:no-underline hover:prose-a:underline
+      prose-strong:text-surf-900
+      prose-code:text-surf-700 prose-code:bg-surf-50 prose-code:px-1 prose-code:rounded
+      prose-pre:bg-gray-900 prose-pre:text-gray-100
+      prose-blockquote:border-l-surf-500 prose-blockquote:text-gray-700
+      prose-img:rounded-lg prose-img:shadow-lg;
+  }
+}
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.5s ease-out;
+  }
+}
